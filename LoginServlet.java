@@ -91,7 +91,7 @@ public class LoginServlet extends HttpServlet {
            
      try {
     	 Class.forName("com.mysql.jdbc.Driver");
-    	  conn= DriverManager.getConnection("jdbc:mysql://localhost/client_database","root","root");
+    	  conn= DriverManager.getConnection("jdbc:mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/jbossews","adminm7Q58M7","JnftT1RCWbkQ");
     	 String query= "select * from Register_Table where email=? and password=?";
     	  ps=conn.prepareStatement(query);
     	 ps.setString(1, username);
