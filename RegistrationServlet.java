@@ -83,7 +83,7 @@ public class RegistrationServlet extends HttpServlet {
            
      try {
     	 Class.forName("com.mysql.jdbc.Driver");
-    	 Connection conn= DriverManager.getConnection("jdbc:mysql://localhost/client_database","root","root");
+    	 Connection conn= DriverManager.getConnection("jdbc:mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/jbossews","adminm7Q58M7","JnftT1RCWbkQ");
     	 String query= "insert into Register_Table(name,email,mobile,dob,city,password) values(?,?,?,?,?,?)";
     	 PreparedStatement ps=conn.prepareStatement(query);
     	 ps.setString(1, name);
